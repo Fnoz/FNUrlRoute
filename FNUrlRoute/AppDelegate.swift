@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,11 +22,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.rootViewController = tabNavi
         self.window!.makeKeyAndVisible()
         
-        FNUrlRoute.initUrlRoute(dictionary: ["goodDetail": GoodDetailViewController.self,
-                                             "shopDetail": ShopDetailViewController.self,
-                                             "login": LoginModule.self])
+        FNUrlRoute.initUrlRoute(dictionary: ["yyy/goodDetail": GoodDetailViewController.self,
+                                             "yyy/shopDetail": ShopDetailViewController.self,
+                                             "www.baidu.com/shopDetail.html": ShopDetailViewController.self,
+                                             "yyy/login": LoginModule.self])
         FNUrlRoute.setHandleOverBlock { (url, modal, params) in
-            print("haha")
+            let safari = SFSafariViewController.init(url: URL.init(string: url!)!)
+            let topViewController = FNUtil.currentTopViewController()
+            if (topViewController.navigationController != nil) && !modal! {
+                let navigation = topViewController.navigationController
+                navigation?.pushViewController(safari, animated: true)
+            }
+            else {
+                topViewController.present(safari, animated: true, completion: nil)
+            }
         }
         
         return true

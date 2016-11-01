@@ -32,13 +32,10 @@ class FN {
     
     class func open(url: String, modal: Bool, params: Dictionary<String, AnyObject>?) {
         let urlTmp = URL.init(string: url)
-        var path = urlTmp?.path
-        if (path?.hasPrefix("/"))! {
-            path = path?.substring(from: (path?.index((path?.startIndex)!, offsetBy: 1))!)
-        }
+        let key = (urlTmp?.host)! + (urlTmp?.path)!
         //有注册过 && 注册的类遵循协议
-        if (FNUrlMatcher.shared.urlDictionary[path!] != nil && (FNUrlMatcher.fetchModuleClass(key: path!) as? FNUrlRouteDelegate != nil)) {
-            let moduleType = FNUrlMatcher.fetchModuleClass(key: path!) as! FNUrlRouteDelegate.Type
+        if (FNUrlMatcher.shared.urlDictionary[key] != nil && (FNUrlMatcher.fetchModuleClass(key: key) as? FNUrlRouteDelegate != nil)) {
+            let moduleType = FNUrlMatcher.fetchModuleClass(key: key) as! FNUrlRouteDelegate.Type
             let module = moduleType.init(params: params) as AnyObject
             
             if module.isKind(of: UIViewController.self) {

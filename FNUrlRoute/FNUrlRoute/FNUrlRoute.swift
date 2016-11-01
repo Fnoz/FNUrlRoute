@@ -23,6 +23,10 @@ class FNUrlRoute {
         FNUrlMatcher.shared.urlDictionary.removeValue(forKey: key)
     }
     
+    class func removeAll() {
+        FNUrlMatcher.shared.urlDictionary.removeAll()
+    }
+    
     class func setHandleOverBlock(blockkk: @escaping FNUrlRouteHandleOver) {
         urlRouteHandleOverBlock = (blockkk as? FNUrlRouteHandleOver)!
     }
