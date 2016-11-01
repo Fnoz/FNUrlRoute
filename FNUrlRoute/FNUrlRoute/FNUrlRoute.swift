@@ -27,6 +27,14 @@ class FNUrlRoute {
         FNUrlMatcher.shared.urlDictionary.removeAll()
     }
     
+    //仅针对注册过的key，返回false则只能用webview打开
+    class func canOpen(url:String) -> Bool {
+        let urlTmp = URL.init(string: url)
+        let key = (urlTmp?.host)! + (urlTmp?.path)!
+        //有注册过 && 注册的类遵循协议
+        return (FNUrlMatcher.shared.urlDictionary[key] != nil && (FNUrlMatcher.fetchModuleClass(key: key) as? FNUrlRouteDelegate != nil))
+    }
+    
     class func setHandleOverBlock(blockkk: @escaping FNUrlRouteHandleOver) {
         urlRouteHandleOverBlock = (blockkk as? FNUrlRouteHandleOver)!
     }
