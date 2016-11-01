@@ -15,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let tabNavi: UINavigationController = UINavigationController(rootViewController: ViewController())
+        tabNavi.view.backgroundColor = .white
+        self.window!.rootViewController = tabNavi
+        self.window!.makeKeyAndVisible()
+        
+        FNUrlRoute.initUrlRoute(dictionary: ["goodDetail": GoodDetailViewController.self,
+                                             "shopDetail": ShopDetailViewController.self])
+        
         return true
     }
 
