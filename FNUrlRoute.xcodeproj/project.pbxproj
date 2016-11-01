@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1075430C1DC8EF0300DE5160 /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1075430B1DC8EF0300DE5160 /* LoginModule.swift */; };
+		1075430F1DC8F76400DE5160 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1075430E1DC8F76400DE5160 /* SafariServices.framework */; };
 		10CFBF261DC73B0900C41964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFBF251DC73B0900C41964 /* AppDelegate.swift */; };
 		10CFBF281DC73B0900C41964 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFBF271DC73B0900C41964 /* ViewController.swift */; };
 		10CFBF2D1DC73B0900C41964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10CFBF2C1DC73B0900C41964 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1075430B1DC8EF0300DE5160 /* LoginModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModule.swift; sourceTree = "<group>"; };
+		1075430E1DC8F76400DE5160 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		10CFBF221DC73B0900C41964 /* FNUrlRoute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FNUrlRoute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CFBF251DC73B0900C41964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10CFBF271DC73B0900C41964 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,17 +45,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1075430F1DC8F76400DE5160 /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1075430D1DC8F76400DE5160 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1075430E1DC8F76400DE5160 /* SafariServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		10CFBF191DC73B0900C41964 = {
 			isa = PBXGroup;
 			children = (
 				10CFBF241DC73B0900C41964 /* FNUrlRoute */,
 				10CFBF231DC73B0900C41964 /* Products */,
+				1075430D1DC8F76400DE5160 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +85,7 @@
 				10CFBF271DC73B0900C41964 /* ViewController.swift */,
 				10CFBF3C1DC73BB800C41964 /* GoodDetailViewController.swift */,
 				10CFBF441DC7AC5C00C41964 /* ShopDetailViewController.swift */,
+				1075430B1DC8EF0300DE5160 /* LoginModule.swift */,
 				10CFBF2C1DC73B0900C41964 /* Assets.xcassets */,
 				10CFBF2E1DC73B0900C41964 /* LaunchScreen.storyboard */,
 				10CFBF311DC73B0900C41964 /* Info.plist */,
@@ -164,6 +179,7 @@
 				10CFBF431DC7905B00C41964 /* FNUrlMatcher.swift in Sources */,
 				10CFBF391DC73B5400C41964 /* FNUrlRoute.swift in Sources */,
 				10CFBF451DC7AC5C00C41964 /* ShopDetailViewController.swift in Sources */,
+				1075430C1DC8EF0300DE5160 /* LoginModule.swift in Sources */,
 				10CFBF3D1DC73BB800C41964 /* GoodDetailViewController.swift in Sources */,
 				10CFBF281DC73B0900C41964 /* ViewController.swift in Sources */,
 				10CFBF261DC73B0900C41964 /* AppDelegate.swift in Sources */,

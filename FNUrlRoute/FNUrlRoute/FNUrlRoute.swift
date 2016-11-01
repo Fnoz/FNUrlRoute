@@ -8,8 +8,9 @@
 
 import UIKit
 
+public typealias FNUrlRouteHandleOver = ((_ url: String?, _ modal: Bool?, _ params: Dictionary<String, AnyClass>?) -> ())
+
 class FNUrlRoute {
-    
     class func initUrlRoute(dictionary: Dictionary<String, AnyClass>?) {
         FNUrlMatcher.shared.urlDictionary = dictionary!
     }
@@ -22,4 +23,7 @@ class FNUrlRoute {
         FNUrlMatcher.shared.urlDictionary.removeValue(forKey: key)
     }
     
+    class func setHandleOverBlock(blockkk: @escaping FNUrlRouteHandleOver) {
+        urlRouteHandleOverBlock = (blockkk as? FNUrlRouteHandleOver)!
+    }
 }

@@ -12,7 +12,6 @@ class GoodDetailViewController: UIViewController, FNUrlRouteDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = .red
     }
 
@@ -23,7 +22,7 @@ class GoodDetailViewController: UIViewController, FNUrlRouteDelegate {
     
     required init(params: [String: AnyObject]?) {
         super.init(nibName: nil, bundle: nil)
-        print("Haha")
+        print(params)
     }
     
     required init?(coder aDecoder: NSCoder) {

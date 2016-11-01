@@ -22,7 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.makeKeyAndVisible()
         
         FNUrlRoute.initUrlRoute(dictionary: ["goodDetail": GoodDetailViewController.self,
-                                             "shopDetail": ShopDetailViewController.self])
+                                             "shopDetail": ShopDetailViewController.self,
+                                             "login": LoginModule.self])
+        FNUrlRoute.setHandleOverBlock { (url, modal, params) in
+            print("haha")
+        }
         
         return true
     }
