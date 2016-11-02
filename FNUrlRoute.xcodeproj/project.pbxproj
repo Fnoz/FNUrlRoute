@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		106608B81DCA4D5700E34918 /* FNUrlRouteHandleOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106608B71DCA4D5700E34918 /* FNUrlRouteHandleOver.swift */; };
 		1075430C1DC8EF0300DE5160 /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1075430B1DC8EF0300DE5160 /* LoginModule.swift */; };
 		1075430F1DC8F76400DE5160 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1075430E1DC8F76400DE5160 /* SafariServices.framework */; };
 		10CFBF261DC73B0900C41964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFBF251DC73B0900C41964 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		106608B71DCA4D5700E34918 /* FNUrlRouteHandleOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNUrlRouteHandleOver.swift; sourceTree = "<group>"; };
 		1075430B1DC8EF0300DE5160 /* LoginModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModule.swift; sourceTree = "<group>"; };
 		1075430E1DC8F76400DE5160 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		10CFBF221DC73B0900C41964 /* FNUrlRoute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FNUrlRoute.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 				10CFBF381DC73B5400C41964 /* FNUrlRoute.swift */,
 				10CFBF421DC7905B00C41964 /* FNUrlMatcher.swift */,
 				10CFBF3A1DC73B6500C41964 /* FN.swift */,
+				106608B71DCA4D5700E34918 /* FNUrlRouteHandleOver.swift */,
 				10CFBF3E1DC73DBF00C41964 /* FNUtil.swift */,
 				10CFBF401DC74DAB00C41964 /* FNUrlRouteDelegate.swift */,
 			);
@@ -182,6 +185,7 @@
 				1075430C1DC8EF0300DE5160 /* LoginModule.swift in Sources */,
 				10CFBF3D1DC73BB800C41964 /* GoodDetailViewController.swift in Sources */,
 				10CFBF281DC73B0900C41964 /* ViewController.swift in Sources */,
+				106608B81DCA4D5700E34918 /* FNUrlRouteHandleOver.swift in Sources */,
 				10CFBF261DC73B0900C41964 /* AppDelegate.swift in Sources */,
 				10CFBF3B1DC73B6500C41964 /* FN.swift in Sources */,
 				10CFBF411DC74DAB00C41964 /* FNUrlRouteDelegate.swift in Sources */,
