@@ -35,15 +35,16 @@ class FNUtil {
     //获取 url 中的 query 字典
     class func getQueryDictionary(url: String) -> Dictionary<String, AnyObject?>? {
         var dic = [:] as Dictionary<String, AnyObject?>?
-        var query = URL.init(string: FNUtil.URLEncode(string: url))?.query
-        query = FNUtil.URLDecode(string: query!)
-        let queryArray = (query?.components(separatedBy: "&"))! as Array<String>
-        
-        for index in 0 ... queryArray.count - 1 {
-            let queryComponent = queryArray[index]
-            let queryComponentPartArray = queryComponent.components(separatedBy: "=") as Array<String>
-            if queryComponentPartArray.count >= 2 {
-                dic?.updateValue(queryComponentPartArray[1] as AnyObject?, forKey: queryComponentPartArray[0])
+        let query = URL.init(string: url)?.query
+        if query != nil {
+            let queryArray = (query?.components(separatedBy: "&"))! as Array<String>
+            
+            for index in 0 ... queryArray.count - 1 {
+                let queryComponent = queryArray[index]
+                let queryComponentPartArray = queryComponent.components(separatedBy: "=") as Array<String>
+                if queryComponentPartArray.count >= 2 {
+                    dic?.updateValue(queryComponentPartArray[1] as AnyObject?, forKey: queryComponentPartArray[0])
+                }
             }
         }
         return dic
@@ -52,8 +53,10 @@ class FNUtil {
     //合并两个字典
     class func mergeDictionary(dic0: Dictionary<String, AnyObject?>?, dic1: Dictionary<String, AnyObject?>?) -> Dictionary<String, AnyObject?>? {
         var dic = dic0
-        for (key, value) in dic1! {
-            dic?.updateValue(value, forKey: key)
+        if dic1 != nil {
+            for (key, value) in dic1! {
+                dic?.updateValue(value, forKey: key)
+            }
         }
         return dic
     }
