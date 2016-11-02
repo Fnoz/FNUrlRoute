@@ -49,7 +49,7 @@ FNUrlRoute.initUrlRoute(dictionary: ["yyy/goodDetail": GoodDetailViewController.
 
 ```
 FNUrlRoute.register(key: "yyy/login", module: LoginModule.self)
-            FNUrlRoute.remove(key: "yyy/login")
+FNUrlRoute.remove(key: "yyy/login")
 ```
 
 4、让你的模块（比如`ShopDetailViewController`），遵守`FNUrlRouteDelegate`协议，并实现`init(params: [String: AnyObject]?)`方法，同时你可以在这里拿到`FN.open(url:params:)`时传入的参数。
@@ -58,7 +58,6 @@ FNUrlRoute.register(key: "yyy/login", module: LoginModule.self)
 
 ```
 FN.open(url: "xxx://yyy/goodDetail?goodId=123")
-
 ```
 
 ### 需要了解的一些逻辑
@@ -102,4 +101,5 @@ pod 'FNUrlRoute', :git => 'git@github.com:Fnoz/FNUrlRoute.git', :tag => '1.0.0'
 
 ###TODO
 1、`url` 中如果含有需要 `urlEncode` 的，暂时还没处理
+
 2、用于切换`tabController`的参数
