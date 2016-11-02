@@ -35,7 +35,7 @@ class FNUrlRoute {
         return (FNUrlMatcher.shared.urlDictionary[key] != nil && (FNUrlMatcher.fetchModuleClass(key: key) as? FNUrlRouteDelegate != nil))
     }
     
-    class func setHandleOverBlock(blockkk: @escaping FNUrlRouteHandleOver) {
-        urlRouteHandleOverBlock = (blockkk as? FNUrlRouteHandleOver)!
+    class func setHandleOverBlock(block: @escaping FNUrlRouteHandleOver) {
+        urlRouteHandleOverBlock = (block as FNUrlRouteHandleOver)
     }
 }
