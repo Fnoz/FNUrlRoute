@@ -21,12 +21,16 @@ FN.open(url: "http://www.baidu.com/shopDetail.html?shopId=123")
 FN.open(url: "xxx://yyy/login")
 FN.open(url: "http://www.weidian.com")
 ```
-![](http://7xl2dx.com1.z0.glb.clouddn.com/fnurlroute_all.png)
+![](http://7xl2dx.com1.z0.glb.clouddn.com/fnurlroute_home.png)
+
 点击对应 cell 分别执行上面的代码，效果如下：
+
 ![](http://7xl2dx.com1.z0.glb.clouddn.com/fnurlroute_0.gif)
 ![](http://7xl2dx.com1.z0.glb.clouddn.com/fnurlroute_1.gif)
+
 ![](http://7xl2dx.com1.z0.glb.clouddn.com/fnurlroute_2.gif)
 ![](http://7xl2dx.com1.z0.glb.clouddn.com/fnurlroute_3.gif)
+
 ![](http://7xl2dx.com1.z0.glb.clouddn.com/fnurlroute_4.gif)
 
 ### 为了用上 FNUrlRoute，你需要做的事
@@ -73,7 +77,6 @@ FN.open(url: "xxx://yyy/goodDetail?goodId=123")
 
 ```
 FN.open(url: "xxx://yyy/shopDetail?shopId=456", modal:true, params:["shopId": "123" as AnyObject])
-
 ```
 
 **答：**模块遵守`FNUrlRouteDelegate`协议，并实现`init(params: [String: AnyObject]?)`方法，同时你可以在这里拿到`FN.open(url:params:)`时传入的参数。
@@ -98,4 +101,5 @@ pod 'FNUrlRoute', :git => 'git@github.com:Fnoz/FNUrlRoute.git', :tag => '1.0.0'
 ```
 
 ###TODO
-1、url 中如果含有需要 urlEncode 的，暂时还没处理
+1、`url` 中如果含有需要 `urlEncode` 的，暂时还没处理
+2、用于切换`tabController`的参数
