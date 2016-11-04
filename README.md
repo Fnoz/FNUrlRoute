@@ -17,17 +17,17 @@ FN.open(url: "http://www.baidu.com/shopDetail.html?shopId=123")
 FN.open(url: "xxx://yyy/login")
 FN.open(url: "http://www.weidian.com")
 ```
-![](http://7xl2dx.com1.z0.glb.clouddn.com/fnurlroute_home.png)
+![](imgs/fnurlroute_home.png)
 
 点击对应 cell 分别执行上面的代码，效果如下：
 
-![](http://7xl2dx.com1.z0.glb.clouddn.com/fnurlroute_0.gif)
-![](http://7xl2dx.com1.z0.glb.clouddn.com/fnurlroute_1.gif)
+![](imgs/fnurlroute_0.gif)
+![](imgs/fnurlroute_1.gif)
 
-![](http://7xl2dx.com1.z0.glb.clouddn.com/fnurlroute_2.gif)
-![](http://7xl2dx.com1.z0.glb.clouddn.com/fnurlroute_3.gif)
+![](imgs/fnurlroute_2.gif)
+![](imgs/fnurlroute_3.gif)
 
-![](http://7xl2dx.com1.z0.glb.clouddn.com/fnurlroute_4.gif)
+![](imgs/fnurlroute_4.gif)
 
 ### 为了用上 FNUrlRoute，你需要做的事
 1、引入代码，代码引用或者 pod 引用
